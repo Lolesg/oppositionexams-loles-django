@@ -1,0 +1,106 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+
+
+
+{% block content %} 
+<!-- Button trigger modal -->
+
+{% if user.is_authenticated %}
+  <!-- Modal -->
+  <div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body-confirm">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 style="font-family:'Times New Roman', Times, serif;font-style: oblique; font-weight: bold;">Guardia Civil</h3>
+  <h3 >Conocimiento teóricos-prácticos</h3>
+  <div class="alinear">
+  <p>El tiempo de esta prueba será de ciento treinta y siete (137) minutos, durante el que se realizarán, sin 
+      solución de continuidad,las siguientes pruebas:
+  </p>
+  <h4>Ortografía</h4>
+  <p>Consistirá en la realización de un ejercicio con diez frases numeradas del uno al diez, en las que se han subrayado cuatro palabras
+      en cada frase con las letras A,B,C y D, debiendo señalar las palabras que presenten una falta de ortografía.
+  </p>
+  <p>Además se contestará una frase con cuatro palabras de reserva subrayadas del mismo modo. Las palabras de reserva, solamente serán valoradas
+      en el caso de que el Tribunal de Selección anule alguna de las anteriores y siguiendo el orden establecido en el cuestionario.
+  </p>
+  <p>Se considera respuesta errónea, tanto dejar de marcar una palabra con falta de ortografía como marcar una que es correcta.</p>
+  <p>Esta prueba se evaluará como "apto" o "no apto".Seran declarados "no aptos" aquellos admitidos a las pruebas que tengan once o más
+      respuestas erróneas y quedarán excluidos del proceso selectivo
+  </p>
+  
+  <h4>Conocimientos generales</h4>
+  <p>Consistirá en la contestación a un cuestionario de cien preguntas, tipo test, extraídas de los temas que figuran en la Resolución de 26 de junio de 2019,
+      de la Dirección General de la Guardia Civil, por la que se determina el temario de las convocatorias de los procesos de selección para el ingreso en los centros
+      docentes de formación para la incorporación de la Escala de Cabos y Guardias de la Guardia Civil con las modificaciones de la resolución anterior.
+  </p>
+  <p>Se calificará de cero (0) a cien (100) puntos, debiendo alcanzar una puntuación mínima de cincuenta (50) puntos, siendo declarados "no aptos" quienes no alcancen dicha puntuación mínima, que quedarán apartados del proceso selectivo.</p>
+  </div>
+  <a class="button" href="https://www.guardiacivil.es/es/servicios/tablonanuncios/ingresocuerpo/index.html" style="margin-bottom: 1vw;">Más Información</a>
+
+{% else %}
+<div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-confirm">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 >Conocimiento teóricos-prácticos</h3>
+<div class="alinear">
+<p>El tiempo de esta prueba será de ciento treinta y siete (137) minutos, durante el que se realizarán, sin 
+    solución de continuidad,las siguientes pruebas:
+</p>
+<h4>Ortografía</h4>
+<p>Consistirá en la realización de un ejercicio con diez frases numeradas del uno al diez, en las que se han subrayado cuatro palabras
+    en cada frase con las letras A,B,C y D, debiendo señalar las palabras que presenten una falta de ortografía.
+</p>
+<p>Además se contestará una frase con cuatro palabras de reserva subrayadas del mismo modo. Las palabras de reserva, solamente serán valoradas
+    en el caso de que el Tribunal de Selección anule alguna de las anteriores y siguiendo el orden establecido en el cuestionario.
+</p>
+<p>Se considera respuesta errónea, tanto dejar de marcar una palabra con falta de ortografía como marcar una que es correcta.</p>
+<p>Esta prueba se evaluará como "apto" o "no apto".Seran declarados "no aptos" aquellos admitidos a las pruebas que tengan once o más
+    respuestas erróneas y quedarán excluidos del proceso selectivo
+</p>
+
+<h4>Conocimientos generales</h4>
+<p>Consistirá en la contestación a un cuestionario de cien preguntas, tipo test, extraídas de los temas que figuran en la Resolución de 26 de junio de 2019,
+    de la Dirección General de la Guardia Civil, por la que se determina el temario de las convocatorias de los procesos de selección para el ingreso en los centros
+    docentes de formación para la incorporación de la Escala de Cabos y Guardias de la Guardia Civil con las modificaciones de la resolución anterior.
+</p>
+<p>Se calificará de cero (0) a cien (100) puntos, debiendo alcanzar una puntuación mínima de cincuenta (50) puntos, siendo declarados "no aptos" quienes no alcancen dicha puntuación mínima, que quedarán apartados del proceso selectivo.</p>
+</div>
+<a class="button" href="https://www.guardiacivil.es/es/servicios/tablonanuncios/ingresocuerpo/index.html" style="margin-bottom: 1vw;">Más Información</a>
+
+
+{% endif %}
+{% endblock content %}

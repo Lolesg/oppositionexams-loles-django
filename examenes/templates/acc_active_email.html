@@ -1,0 +1,4 @@
+{% autoescape off %}
+Hola {{ user.username }},
+Haz click en el enlace que se te proporciona a continuación para completar el registro,http://{{ domain }}{% url 'oppositionexams:activate' uidb64=uid token=token %}
+{% endautoescape %}

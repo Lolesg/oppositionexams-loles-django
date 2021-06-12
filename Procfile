@@ -1,0 +1,1 @@
+web: gunicorn oppositionexams.wsgi --log-file -

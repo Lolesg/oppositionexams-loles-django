@@ -1,0 +1,146 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<div id="owl-slide" class="owl-carousel">
+    <div class="item">
+        <img src="{% static 'images/policia2.jpg' %}" />
+        <!-- Static Header -->
+        <div class="header-text hidden-xs">
+            <div class="col-md-12 text-left">
+                <h1>Oposición Policía Nacional</h1>
+                <p>Instituto armado de naturaleza civil</p>
+                <a class="button" href="#">Leer más</a>
+            </div>
+        </div><!-- /header-text -->
+    </div>
+    <div class="item">
+
+        <img src="{% static 'images/guardia2.jpg' %}" />
+        <!-- Static Header -->
+        <div class="header-text hidden-xs">
+            <div class="col-md-12 text-left">
+                <h1>Oposición Guardia Civil</h1>
+                <p>Instituto armado de naturaleza militar</p>
+                <a class="button" href="#">Leer más</a>
+            </div>
+        </div><!-- /header-text -->
+    </div>
+    <div class="item">
+        <img src="{% static 'images/test1.jpg' %}" />
+        <!-- Static Header -->
+        <div class="header-text hidden-xs">
+            <div class="col-md-12 text-left">
+                <h1>Examenes Tipo Test</h1>
+                <p>Examenes tipo test de las distintas oposiciones</p>
+                <a class="button" href="#">Leer más</a>
+            </div>
+        </div><!-- /header-text -->
+        
+    </div>
+</div>
+</header>
+<!--////////////////////////////////////Container-->
+<section id="container">
+<div class="wrap-container">
+    <!-----------------content-box-about-------------------->
+    <section class="content-box box-about">
+        <div class="zerogrid">
+            <div class="wrap-box"><!--Start Box-->
+                <div class="box-header">
+                    <h2>NOSOTROS</h2>
+                </div>
+                <div class="box-content">
+                    <p>Opposition Exams es el proyecto final de una alumna del grado superior de Desarrollo de Aplicaciones Web</p>
+                    <p>El objetivo principal de esta plataforma, es que los usuario puedan hacer examenes de distintas oposiciones de forma gratuita, solo tienen que
+                        registrarse en la aplicación
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------------content-box-main-------------------->
+    <section class="content-box box-main">
+        <div class="zerogrid">
+            <div class="wrap-box"><!--Start Box-->
+                <div class="row">
+                    <div class="col-1-3">
+                        <div class="wrap-col">
+                            <div class="box-entry">
+                                <img src="{% static 'images/policia3.jpg' %}" class="img-responsive"/>
+                                <div class="entry-details">
+                                    <div class="entry-meta ">
+                                        <a class="cat" href="#">Información</a>
+                                        <div class="f-right t-right">
+                                            <span><i class="fa fa-calendar"></i> 25/03/2021 </span> 
+
+                                        </div>
+                                    </div>
+                                    <div class="entry-des">
+                                        <h3>Oposiciones Policía Nacional</h3>
+                                        <p>Si desea obtener más información sobre la oposición de Policia Nacional, como las pruebas que se realizan además
+                                            de los requisitos necesarios para poder presentarse y la forma de acceso a las distintas escalas. Pulse "Ir a"
+                                        </p>
+                                        
+                                    </div>
+                                    <a class="button" href="https://www.policia.es/_es/tupolicia_procesos_selectivos_basicapolicia.php">Ir a</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col">
+                            <div class="box-entry">
+                                <img src="{% static 'images/guardia4.jpg' %}" class="img-responsive"/>
+                                <div class="entry-details">
+                                    <div class="entry-meta ">
+                                        <a class="cat" href="#">Información</a>
+                                        <div class="f-right t-right">
+                                            <span><i class="fa fa-calendar"></i> 01/04/2021</span> 
+                                        </div>
+                                    </div>
+                                    <div class="entry-des">
+                                        <h3>Oposiciones Guardia Civil</h3>
+                                        <p>Si desea obtener más información sobre la oposición de Guardia Civil, como las pruebas que se realizan además
+                                            de los requisitos necesarios para poder presentarse y la forma de acceso a las distintas escalas. Pulse "Ir a"
+                                        </p>
+                                    </div>
+                                    <a class="button" href="https://www.guardiacivil.es/es/servicios/tablonanuncios/ingresocuerpo/index.html">Ir a</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col">
+                            <div class="box-entry">
+                                <img src="{% static 'images/ejercito.jpeg' %}" class="img-responsive"/>
+                                <div class="entry-details">
+                                    <div class="entry-meta ">
+                                        <a class="cat" href="#">Información</a>
+                                        <div class="f-right t-right">
+                                            <span><i class="fa fa-calendar"></i> 10/04/2021</span> 
+                                        </div>
+                                    </div>
+                                    <div class="entry-des">
+                                        <h3>Como entrar al ejercito</h3>
+                                        <p>Si quieres saber como poder tomer parte del ejército pincha "Ir a", para ir a la pagina oficial, donde se informa
+                                            de las distintas ramas del ejército y del proceso de selección al mismo.
+                                        </p>
+                                    </div>
+                                    <a class="button" href="http://www.reclutamiento.defensa.gob.es/como-ingresar/tropa-marineria/ingresar/pruebas-ingreso/">Ir a</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+
+
+
+{% block content %} 
+<!-- Button trigger modal -->
+
+{% if user.is_authenticated %}
+  <!-- Modal -->
+  <div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body-confirm">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 style="font-family:'Times New Roman', Times, serif;font-style: oblique; font-weight: bold;">Policía Nacional</h3>
+  <div class="alinear">
+    <p>El <strong>Cuerpo Nacional de Policía </strong>(<strong>CNP</strong> ), denominado también <strong>Policía Nacional</strong> es un instituto armado español de naturaleza civil
+      , dependiente del <strong>Ministerio del Interior</strong> , principal responsable de la vigilancia policial de todas las capitales de provincia y núcleos urbanos que el Gobierno determine.Es una de las dos fuerzas de seguridad de ámbito nacional, 
+      junto con la Guardia Civil. 
+     </p>
+     <p>
+      Se encarga además, a través de sus numerosas especialidades, de investigaciones penales, judiciales, terroristas y asuntos sobre orden público y extranjería. Sin 
+      embargo, la capacidad y poder del CNP varía según las distintas comunidades autónomas del país; la Ertzaintza en el País Vasco, los Mozos de Escuadra en Cataluña o 
+      la Policía Foral en Navarra son los principales cuerpos y fuerzas de seguridad en estas comunidades, por lo que el papel del cuerpo en estas regiones es menor. En 
+      los casos de Cataluña y el País Vasco, el Cuerpo Nacional de Policía sigue desarrollando las competencias que no se han cedido a los Mozos de Escuadra ni a la 
+      Ertzaintza completamente, como la lucha contra el terrorismo, contra el crimen organizado y redes de inmigración ilegal. También tiene competencias plenas en cuanto 
+      a tramitaciones del DNI y permisos de residencia para los ciudadanos extranjeros.
+     </p>
+
+  </div>
+  <a class="button" href="https://www.policia.es/_es/tupolicia_procesos_selectivos_basicapolicia.php" style="margin-bottom: 2vw;">Más Información</a>
+</div>
+
+{% else %}
+<div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-confirm">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 style="font-family:'Times New Roman', Times, serif;font-style: oblique; font-weight: bold;">Policía Nacional</h3>
+<div class="alinear">
+  <p>El <strong>Cuerpo Nacional de Policía </strong>(<strong>CNP</strong> ), denominado también <strong>Policía Nacional</strong> es un instituto armado español de naturaleza civil
+    , dependiente del <strong>Ministerio del Interior</strong> , principal responsable de la vigilancia policial de todas las capitales de provincia y núcleos urbanos que el Gobierno determine.Es una de las dos fuerzas de seguridad de ámbito nacional, 
+    junto con la Guardia Civil. 
+   </p>
+   <p>
+    Se encarga además, a través de sus numerosas especialidades, de investigaciones penales, judiciales, terroristas y asuntos sobre orden público y extranjería. Sin 
+    embargo, la capacidad y poder del CNP varía según las distintas comunidades autónomas del país; la Ertzaintza en el País Vasco, los Mozos de Escuadra en Cataluña o 
+    la Policía Foral en Navarra son los principales cuerpos y fuerzas de seguridad en estas comunidades, por lo que el papel del cuerpo en estas regiones es menor. En 
+    los casos de Cataluña y el País Vasco, el Cuerpo Nacional de Policía sigue desarrollando las competencias que no se han cedido a los Mozos de Escuadra ni a la 
+    Ertzaintza completamente, como la lucha contra el terrorismo, contra el crimen organizado y redes de inmigración ilegal. También tiene competencias plenas en cuanto 
+    a tramitaciones del DNI y permisos de residencia para los ciudadanos extranjeros.
+   </p>
+
+</div>
+<a class="button" href="https://www.policia.es/_es/tupolicia_procesos_selectivos_basicapolicia.php" style="margin-bottom: 1vw;">Más Información</a>
+</div>
+
+{% endif %}
+{% endblock content %}

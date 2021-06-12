@@ -1,0 +1,50 @@
+{% extends "base_generic.html" %} 
+
+{% load static %}
+
+
+{% block scripts %} 
+
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+{% endblock scripts %}
+{% block content %} 
+
+<div class="container" style="margin-top: 50px;">
+  <div class="row justify-content-center">
+    <div class="col-md-5 shadow-sm p-3 mb-5 bg-white rounded" >
+      <h2>Registrarse</h2>
+      <form method="POST">
+        {% csrf_token %} 
+        <div class="form-group">
+          <label for="first_name">Nombre:</label>
+          <input type="text" class="form-control" id="first_name" placeholder="Introduzca su nombre" name="first_name">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Apellidos:</label>
+          <input type="text" class="form-control" id="last_name" placeholder="Introduzca sus apellidos" name="last_name">
+        </div>
+        <div class="form-group">
+          <label for="username">Nombre se Usuario:</label>
+          <input type="text" class="form-control" id="username" placeholder="Introduzca su nombre se usuario" name="username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email" placeholder="Introduzca su email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd1">Contraseña:</label>
+          <input type="password" class="form-control" id="pwd1" placeholder="Introduzca su contraseña" name="password1">
+        </div>
+        <div class="form-group">
+          <label for="pwd2">Confirmación Contraseña</label>
+          <input type="password" class="form-control" id="pwd2" placeholder="Vuelva a introducir su contraseña" name="password2">
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

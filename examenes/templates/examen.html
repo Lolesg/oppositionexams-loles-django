@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+
+{% block scripts %} 
+<script src="{% static 'js/quiz.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+{% endblock scripts %}
+
+{% block content %} 
+<b>{{obj.nombre}}</b>
+<p>Puntuación para pasar: {{obj.puntuacion_para_pasar}}</p>
+<div class="bloque"><p>Tiempo del examen (minutos): </p><strong><p id="restante">{{obj.tiempo}}</p></strong><p></p></div>
+<div id="scorebox" class="score-box"></div>
+<div id="resultbox" class="result-box"></div>
+<form id="quiz-form" class="mt-3 mb-3 prueba1">
+    {% csrf_token %} 
+    <div id="quiz-box" class="izquierda"></div>
+    <button type="submit" class="btn btn-primary mt-3" onclick="detenerContador()">Terminar</button>
+</form>
+<form id="finalizar">
+    <a href="{% url 'oppositionexams:index' %}"class="not-visible visible" id="boton">Finalizar Revision</a>
+    <p></p>
+</form>
+{% endblock content %}

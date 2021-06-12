@@ -1,0 +1,125 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+
+{% block scripts %} 
+{% if user.is_authenticated %}
+<script src="{% static 'js/main.js' %}" defer></script>
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+{% else %}
+<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+{% endif %}
+{% endblock scripts %}
+
+{% block content %} 
+<!-- Button trigger modal -->
+
+{% if user.is_authenticated %}
+  <!-- Modal -->
+  <div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body-confirm">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alinear">
+    <h3>Examenes Psicotécnicos</h3>
+    <p>Consistirá en la contestación por escrito a un cuestionario para evaluar la capacidad ortográfica del/de la opositor/a.</p>
+    <p>Para la correción de la prueba se utilizarán las entradas propias de que figuren en el Diccionario de la lengua española, obra
+      lexicográfica de referencia de la Academia.
+    </p>
+    <p>
+      Se utilizará la fórmula: [A–E/2]*10/P, siendo «A» el número de aciertos, «E» el de errores y «P» el número total de preguntas. Serán declarados aptos/as los opositores/as que obtengan una nota igual o superior a 5.
+    </p>
+    </div>
+  <br>
+  <table id="tabla" style="border-bottom: 0.5vw solid #FEBD4B;border-top: 0.5vw solid #FEBD4B;border-left: 0.5vw solid #FEBD4B;border-right: 0.5vw solid #FEBD4B;">
+    <thead>
+      <tr>
+        <th style="background-color: rgb(24, 51, 255);padding-left:2vw;">Nombre del Examen</th>
+        <th style="background-color: rgb(24, 51, 255);padding-left:2vw;">Tipo de Prueba</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for obj in examen_guardia %} 
+      <tr>
+        <td style="padding-left:2vw;border-bottom: 0.5vw solid #FEBD4B;">  <button class="btn btn-linl modal-button"
+          data-pk="{{ obj.pk }}"
+          data-examen="{{ obj.nombre }}"
+          data-preguntas="{{ obj.numero_de_preguntas }}"
+          data-tiempo="{{ obj.tiempo }}"
+          data-pasar="{{ obj.puntuacion_para_pasar }}"
+          data-toggle="modal" 
+          data-target='#quizStartModal'
+        >
+        {{obj.nombre}}
+        </button></td>
+        <td style="padding-left:2vw;border-bottom: 0.5vw solid #FEBD4B;padding-top: 0.4vw;">{{obj.sub_categoria}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+<div class="modal fade" id="quizStartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: absolute;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body-confirm">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        <button type="button" id ="start-button" class="btn btn-success">Empezar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="alinear">
+<h3>Examenes Psicotécnicos</h3>
+<p>Consistirá en la contestación por escrito a un cuestionario para evaluar la capacidad ortográfica del/de la opositor/a.</p>
+<p>Para la correción de la prueba se utilizarán las entradas propias de que figuren en el Diccionario de la lengua española, obra
+  lexicográfica de referencia de la Academia.
+</p>
+<p>
+  Se utilizará la fórmula: [A–E/2]*10/P, siendo «A» el número de aciertos, «E» el de errores y «P» el número total de preguntas. Serán declarados aptos/as los opositores/as que obtengan una nota igual o superior a 5.
+</p>
+</div>
+<div style="background-color: red;color:white ;width: max-content;padding: 1vw;border-radius: 5vw;display: inline-block;
+margin-bottom: 1vw;">No puedes hacer los examenes porque no has iniciado sesión</div>
+<br>
+<table id="tabla" style="border-bottom: 0.5vw solid #FEBD4B;border-top: 0.5vw solid #FEBD4B;border-left: 0.5vw solid #FEBD4B;border-right: 0.5vw solid #FEBD4B;">
+  <thead>
+    <tr>
+      <th style="background-color: rgb(24, 51, 255);padding-left:2vw;">Nombre del Examen</th>
+      <th style="background-color: rgb(24, 51, 255);padding-left:2vw;">Tipo de Prueba</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for obj in examen_guardia %} 
+    <tr>
+      <td style="padding-left:2vw;">{{obj.nombre}}</td>
+      <td style="padding-left:2vw;">{{obj.sub_categoria}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock content %}

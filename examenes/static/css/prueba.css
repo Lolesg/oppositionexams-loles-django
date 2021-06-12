@@ -1,0 +1,113 @@
+.prueba{
+    z-index: 1;
+    position: unset;
+}
+
+.not-visible{
+    display: none;
+}
+.izquierda{
+    text-align: left;
+}
+
+label{
+    display: block;
+}
+.ans{
+    width: 1vw;
+    height: 1vw;
+}
+.alinear input{
+    float: left;
+    margin-top: 0.1vw;
+}
+.mb-2{
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-bottom: solid 0.5vw aqua;
+    background-color: rgb(163, 242, 242);
+}
+.bloque {
+    display: inline;
+}
+.bloque p {
+    width: 10%;
+    display: inline;
+}
+#restante{
+    font-weight: bold;
+}
+.visible{
+    margin:1.5vw;
+    padding:0.5vw;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.registrarse{
+    width: 50%;
+    height: 50%;
+    margin-left:25vw;
+    margin-bottom: 5vw;
+    text-align: center;
+}
+.alinear h3{
+    text-align: center;
+}
+
+td{ 
+    color: black;
+    padding: 0.5vw;
+    margin: 0.5vw;
+}
+th{
+    background: #FEBD4B;
+}
+tr:only-child(2){
+    background: white;
+}
+.correo{
+    text-align: center;
+}
+.correo p{
+    text-align: center;
+    color:blue;
+}
+.alinear-derecha{
+    text-align: left;
+    height: 50%;
+    margin-left: 30%;
+}
+.alinear-derecha button{
+    text-align: left;
+
+}
+.diseno{
+    display: contents;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.diseno label {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    
+}
+.diseno input{
+    margin-left: 2vw;
+}
+.formulario{
+    width: 30vw;
+    margin-left: 35vw;
+}
+.formulario input{
+    height: 1vw;
+}
+.formulario button{
+    margin-left: 12vw;
+}
+
+#tabla tr:nth-child(even){
+    background-color: aqua;
+}
